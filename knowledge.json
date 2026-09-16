@@ -1,0 +1,2107 @@
+{
+ "name": "Farmiera Poultry knowledge base",
+ "version": "2026-09",
+ "sources": [
+  "Ceva Handbook of Poultry Diseases Vol.2 (2014)",
+  "Ceva Newcastle disease booklet (2023)",
+  "Ceva infectious bronchitis booklet (2023)",
+  "DVS Malaysia guidance",
+  "General veterinary references (AI, IBD)"
+ ],
+ "symptoms": [
+  {
+   "id": "resp",
+   "group": "breath",
+   "label": {
+    "en": "Sneezing, coughing, gasping",
+    "ms": "Bersin, batuk, tercungap",
+    "zh": "打喷嚏、咳嗽、张口呼吸"
+   }
+  },
+  {
+   "id": "nasal",
+   "group": "breath",
+   "label": {
+    "en": "Runny nose or bad smell",
+    "ms": "Hidung berair atau berbau busuk",
+    "zh": "流鼻涕或有恶臭"
+   }
+  },
+  {
+   "id": "green",
+   "group": "gut",
+   "label": {
+    "en": "Green, watery droppings",
+    "ms": "Najis hijau berair",
+    "zh": "绿色水样粪便"
+   }
+  },
+  {
+   "id": "white",
+   "group": "gut",
+   "label": {
+    "en": "White chalky droppings, pasted vent",
+    "ms": "Najis putih seperti kapur, dubur melekat",
+    "zh": "白色石灰样粪便、肛门糊住"
+   }
+  },
+  {
+   "id": "blood",
+   "group": "gut",
+   "label": {
+    "en": "Bloody, dark or smelly droppings",
+    "ms": "Najis berdarah, gelap atau berbau",
+    "zh": "带血、发黑或恶臭粪便"
+   }
+  },
+  {
+   "id": "wet",
+   "group": "gut",
+   "label": {
+    "en": "Wet litter, birds drink more",
+    "ms": "Sekam basah, ayam minum lebih",
+    "zh": "垫料潮湿、饮水增加"
+   }
+  },
+  {
+   "id": "nerv",
+   "group": "nerve",
+   "label": {
+    "en": "Twisted neck, circling, paralysis",
+    "ms": "Leher terpusing, berpusing, lumpuh",
+    "zh": "扭颈、转圈、瘫痪"
+   }
+  },
+  {
+   "id": "lame",
+   "group": "nerve",
+   "label": {
+    "en": "Lame or swollen joints",
+    "ms": "Tempang atau sendi bengkak",
+    "zh": "跛行或关节肿大"
+   }
+  },
+  {
+   "id": "eye",
+   "group": "head",
+   "label": {
+    "en": "Watery or foamy eyes",
+    "ms": "Mata berair atau berbuih",
+    "zh": "流泪或眼有泡沫"
+   }
+  },
+  {
+   "id": "face",
+   "group": "head",
+   "label": {
+    "en": "Swollen face, wattles or sinus",
+    "ms": "Muka, pial atau sinus bengkak",
+    "zh": "脸、肉髯或鼻窦肿胀"
+   }
+  },
+  {
+   "id": "comb",
+   "group": "head",
+   "label": {
+    "en": "Dark blue or purple comb",
+    "ms": "Balung biru gelap atau ungu",
+    "zh": "鸡冠发紫发黑"
+   }
+  },
+  {
+   "id": "scab",
+   "group": "head",
+   "label": {
+    "en": "Wart-like scabs on comb or skin",
+    "ms": "Kudis seperti ketuat pada balung atau kulit",
+    "zh": "鸡冠或皮肤上有疣状结痂"
+   }
+  },
+  {
+   "id": "drop",
+   "group": "egg",
+   "label": {
+    "en": "Egg production drops",
+    "ms": "Pengeluaran telur menurun",
+    "zh": "产蛋下降"
+   }
+  },
+  {
+   "id": "shell",
+   "group": "egg",
+   "label": {
+    "en": "Soft, thin, rough or no shell",
+    "ms": "Kulit lembut, nipis, kasar atau tiada",
+    "zh": "软壳、薄壳、粗糙或无壳蛋"
+   }
+  },
+  {
+   "id": "dull",
+   "group": "flock",
+   "label": {
+    "en": "Dull, fluffed up, sleepy",
+    "ms": "Lesu, bulu kembang, mengantuk",
+    "zh": "精神差、羽毛蓬松、昏睡"
+   }
+  },
+  {
+   "id": "eat",
+   "group": "flock",
+   "label": {
+    "en": "Eating or drinking less",
+    "ms": "Kurang makan atau minum",
+    "zh": "采食或饮水减少"
+   }
+  },
+  {
+   "id": "growth",
+   "group": "flock",
+   "label": {
+    "en": "Poor or uneven growth",
+    "ms": "Pertumbuhan lambat atau tidak seragam",
+    "zh": "生长慢或大小不均"
+   }
+  },
+  {
+   "id": "sudden",
+   "group": "flock",
+   "label": {
+    "en": "Sudden deaths",
+    "ms": "Kematian mengejut",
+    "zh": "突然死亡"
+   }
+  },
+  {
+   "id": "many",
+   "group": "flock",
+   "label": {
+    "en": "Many birds dying fast",
+    "ms": "Banyak ayam mati dengan cepat",
+    "zh": "短时间内大量死亡"
+   }
+  }
+ ],
+ "diseases": [
+  {
+   "id": "nd",
+   "type": "virus",
+   "notify": true,
+   "flow": "emerg",
+   "src": "Ceva Newcastle disease booklet (2023); WOAH",
+   "tags": [
+    "resp",
+    "green",
+    "nerv",
+    "dull",
+    "sudden",
+    "many",
+    "drop",
+    "shell",
+    "face",
+    "eat"
+   ],
+   "name": {
+    "en": "Newcastle disease (ND)",
+    "ms": "Penyakit Newcastle (ND)",
+    "zh": "新城疫 (ND)"
+   },
+   "cause": {
+    "en": "Avian paramyxovirus type 1 (APMV-1). One serotype, many genotypes.",
+    "ms": "Paramiksovirus burung jenis 1 (APMV-1). Satu serotip, banyak genotip.",
+    "zh": "禽副黏病毒 1 型 (APMV-1)。只有一个血清型，但有很多基因型。"
+   },
+   "affects": {
+    "en": "Chickens, turkeys, quail and other birds, at any age.",
+    "ms": "Ayam, ayam belanda, puyuh dan burung lain, semua umur.",
+    "zh": "鸡、火鸡、鹌鹑等禽鸟，各日龄都会感染。"
+   },
+   "spread": {
+    "en": "Sick birds, droppings, people, vehicles, wild birds, live bird markets, and live vaccine virus from nearby farms.",
+    "ms": "Ayam sakit, najis, orang, kenderaan, burung liar, pasar ayam hidup, dan virus vaksin hidup dari ladang berdekatan.",
+    "zh": "病鸡、粪便、人员、车辆、野鸟、活禽市场，以及邻近鸡场的活疫苗病毒。"
+   },
+   "signs": [
+    {
+     "en": "Breathing trouble, gasping",
+     "ms": "Sukar bernafas, tercungap",
+     "zh": "呼吸困难、张口喘气"
+    },
+    {
+     "en": "Green watery droppings",
+     "ms": "Najis hijau berair",
+     "zh": "绿色水样粪便"
+    },
+    {
+     "en": "Twisted neck, loss of balance",
+     "ms": "Leher terpusing, hilang imbangan",
+     "zh": "扭颈、站立不稳"
+    },
+    {
+     "en": "Sudden deaths; up to 100% in severe outbreaks",
+     "ms": "Kematian mengejut; sehingga 100% dalam wabak teruk",
+     "zh": "突然死亡；严重爆发时死亡率可达 100%"
+    },
+    {
+     "en": "Egg drop and misshapen eggs",
+     "ms": "Telur menurun dan bentuk tidak normal",
+     "zh": "产蛋下降、蛋形异常"
+    },
+    {
+     "en": "Mild form: only light breathing signs and an uneven flock",
+     "ms": "Bentuk ringan: hanya tanda pernafasan ringan dan saiz tidak seragam",
+     "zh": "轻型：只有轻微呼吸症状，鸡群大小不均"
+    }
+   ],
+   "warn": {
+    "en": "ND looks like bird flu. Only a lab test can tell them apart. It can also cause mild eye infection in people, so protect your eyes.",
+    "ms": "ND nampak seperti selesema burung. Hanya ujian makmal boleh membezakannya. Ia juga boleh menyebabkan jangkitan mata ringan pada manusia, jadi lindungi mata anda.",
+    "zh": "新城疫和禽流感很像，只有化验才能区分。它也可能让人得轻微结膜炎，请保护眼睛。"
+   },
+   "treat": {
+    "en": "No medicine cures ND. Antibiotics only help secondary infections such as E. coli, and only on vet advice.",
+    "ms": "Tiada ubat untuk ND. Antibiotik hanya membantu jangkitan sekunder seperti E. coli, dan hanya atas nasihat doktor haiwan.",
+    "zh": "新城疫没有药可治。抗生素只用于继发感染（如大肠杆菌），且须听兽医建议。"
+   },
+   "prevent": [
+    {
+     "en": "Vaccinate on a vet-planned program. Hatchery vaccination gives more even cover than farm vaccination.",
+     "ms": "Vaksin mengikut program doktor haiwan. Vaksin di penetasan memberi perlindungan lebih seragam berbanding di ladang.",
+     "zh": "按兽医制定的程序免疫。孵化场免疫比场内免疫更均匀可靠。"
+    },
+    {
+     "en": "Water vaccination: use clean water with no sanitiser, and let birds finish it quickly.",
+     "ms": "Vaksin melalui air: guna air bersih tanpa bahan pembasmi kuman, dan pastikan ayam habiskan dengan cepat.",
+     "zh": "饮水免疫：用不含消毒剂的清水，并让鸡尽快饮完。"
+    },
+    {
+     "en": "Check vaccine take with blood tests (serology).",
+     "ms": "Semak keberkesanan vaksin dengan ujian darah (serologi).",
+     "zh": "用血清检测确认免疫效果。"
+    },
+    {
+     "en": "Keep wild birds out. No visits to other farms or bird markets.",
+     "ms": "Halang burung liar. Jangan melawat ladang lain atau pasar burung.",
+     "zh": "防止野鸟进入。不去其他鸡场或活禽市场。"
+    }
+   ],
+   "action_flow": "emerg"
+  },
+  {
+   "id": "ai",
+   "type": "virus",
+   "notify": true,
+   "flow": "emerg",
+   "src": "General veterinary references; WOAH; DVS Malaysia",
+   "tags": [
+    "sudden",
+    "many",
+    "comb",
+    "face",
+    "dull",
+    "eat",
+    "drop",
+    "resp",
+    "green",
+    "nerv"
+   ],
+   "name": {
+    "en": "Avian influenza (bird flu)",
+    "ms": "Influenza burung (selesema burung)",
+    "zh": "禽流感"
+   },
+   "cause": {
+    "en": "Influenza A virus. Highly pathogenic strains (such as H5) cause the severe form.",
+    "ms": "Virus influenza A. Strain patogenik tinggi (seperti H5) menyebabkan bentuk teruk.",
+    "zh": "A 型流感病毒。高致病性毒株（如 H5）引起严重病型。"
+   },
+   "affects": {
+    "en": "All poultry and wild birds. Some strains can infect people.",
+    "ms": "Semua ayam itik dan burung liar. Sesetengah strain boleh menjangkiti manusia.",
+    "zh": "所有家禽和野鸟。部分毒株会感染人。"
+   },
+   "spread": {
+    "en": "Wild and migratory birds, droppings, water, people, crates, vehicles and egg trays.",
+    "ms": "Burung liar dan burung hijrah, najis, air, orang, bakul, kenderaan dan dulang telur.",
+    "zh": "野鸟和候鸟、粪便、水源、人员、鸡笼、车辆和蛋托。"
+   },
+   "signs": [
+    {
+     "en": "Many sudden deaths, sometimes with no warning",
+     "ms": "Banyak kematian mengejut, kadang-kadang tanpa amaran",
+     "zh": "大量突然死亡，有时毫无先兆"
+    },
+    {
+     "en": "Swollen head; dark blue comb and wattles",
+     "ms": "Kepala bengkak; balung dan pial biru gelap",
+     "zh": "头部肿胀；鸡冠和肉髯发紫"
+    },
+    {
+     "en": "Very low feed and water intake",
+     "ms": "Makan dan minum sangat kurang",
+     "zh": "采食饮水大幅下降"
+    },
+    {
+     "en": "Sharp egg drop",
+     "ms": "Telur menurun mendadak",
+     "zh": "产蛋骤降"
+    },
+    {
+     "en": "Breathing signs, diarrhoea, nervous signs",
+     "ms": "Tanda pernafasan, cirit-birit, tanda saraf",
+     "zh": "呼吸症状、腹泻、神经症状"
+    }
+   ],
+   "warn": {
+    "en": "Risk to people. Never handle sick or dead birds without protection.",
+    "ms": "Berisiko kepada manusia. Jangan pegang ayam sakit atau mati tanpa perlindungan.",
+    "zh": "对人有风险。没有防护不可接触病鸡或死鸡。"
+   },
+   "treat": {
+    "en": "No treatment. DVS controls outbreaks with movement control, culling and cleaning.",
+    "ms": "Tiada rawatan. DVS mengawal wabak melalui kawalan pergerakan, pemusnahan dan pembersihan.",
+    "zh": "无药可治。由 DVS 通过限制移动、扑杀和清洁消毒来控制疫情。"
+   },
+   "prevent": [
+    {
+     "en": "Keep ducks, wild birds and other animals away from the flock and its water.",
+     "ms": "Jauhkan itik, burung liar dan haiwan lain dari kawanan dan sumber airnya.",
+     "zh": "让鸭子、野鸟及其他动物远离鸡群和水源。"
+    },
+    {
+     "en": "Use a closed or netted house and a clean water source.",
+     "ms": "Guna reban tertutup atau berjaring dan sumber air bersih.",
+     "zh": "使用密闭或有防鸟网的鸡舍，水源要干净。"
+    },
+    {
+     "en": "Clean and disinfect crates, trays and vehicles before they enter.",
+     "ms": "Bersih dan nyahkuman bakul, dulang dan kenderaan sebelum masuk.",
+     "zh": "鸡笼、蛋托和车辆入场前要清洗消毒。"
+    },
+    {
+     "en": "Move birds only with DVS permits.",
+     "ms": "Pindahkan ayam hanya dengan permit DVS.",
+     "zh": "只凭 DVS 许可移动鸡只。"
+    }
+   ],
+   "action_flow": "emerg"
+  },
+  {
+   "id": "ib",
+   "type": "virus",
+   "flow": "std",
+   "src": "Ceva infectious bronchitis booklet (2023)",
+   "tags": [
+    "resp",
+    "nasal",
+    "eye",
+    "drop",
+    "shell",
+    "wet",
+    "growth",
+    "dull"
+   ],
+   "name": {
+    "en": "Infectious bronchitis (IB)",
+    "ms": "Bronkitis berjangkit (IB)",
+    "zh": "传染性支气管炎 (IB)"
+   },
+   "cause": {
+    "en": "Avian coronavirus (IBV). It mutates often, so many variants exist (such as QX and 793B).",
+    "ms": "Koronavirus burung (IBV). Ia kerap bermutasi, jadi banyak varian wujud (seperti QX dan 793B).",
+    "zh": "禽冠状病毒 (IBV)。容易突变，所以变异株很多（如 QX、793B）。"
+   },
+   "affects": {
+    "en": "Chickens of all ages: broilers, layers and breeders.",
+    "ms": "Ayam semua umur: pedaging, penelur dan baka.",
+    "zh": "各日龄鸡：肉鸡、蛋鸡和种鸡。"
+   },
+   "spread": {
+    "en": "Very contagious through air, droppings, people and equipment. It can cover large areas quickly.",
+    "ms": "Sangat mudah berjangkit melalui udara, najis, orang dan peralatan. Ia boleh merebak ke kawasan luas dengan cepat.",
+    "zh": "传染性极强，经空气、粪便、人员和器具传播，可迅速扩散到大范围。"
+   },
+   "signs": [
+    {
+     "en": "Coughing, sneezing, rattling breath",
+     "ms": "Batuk, bersin, bunyi nafas berdehit",
+     "zh": "咳嗽、打喷嚏、呼吸有啰音"
+    },
+    {
+     "en": "Broilers: uneven growth and worse FCR",
+     "ms": "Pedaging: pertumbuhan tidak seragam dan FCR lebih teruk",
+     "zh": "肉鸡：生长不均、料肉比变差"
+    },
+    {
+     "en": "Egg drop of 5–70%; thin, rough, pale or misshapen eggs; watery whites",
+     "ms": "Telur menurun 5–70%; kulit nipis, kasar, pucat atau cacat; putih telur cair",
+     "zh": "产蛋下降 5–70%；蛋壳薄、粗、褪色或畸形；蛋白稀"
+    },
+    {
+     "en": "Some strains harm kidneys: wet litter and more deaths",
+     "ms": "Sesetengah strain merosakkan buah pinggang: sekam basah dan kematian bertambah",
+     "zh": "部分毒株损害肾脏：垫料潮湿、死亡增加"
+    },
+    {
+     "en": "Early infection in pullets can cause false layers later",
+     "ms": "Jangkitan awal pada ayam dara boleh menyebabkan penelur palsu kemudian",
+     "zh": "雏鸡早期感染，日后可能成为假产蛋鸡"
+    }
+   ],
+   "warn": {
+    "en": "These signs are not unique to IB. A lab test (PCR) shows which strain is present, which guides vaccine choice.",
+    "ms": "Tanda ini tidak khusus untuk IB. Ujian makmal (PCR) menunjukkan strain yang ada, sebagai panduan memilih vaksin.",
+    "zh": "这些症状并非 IB 独有。化验（PCR）可确认毒株，作为选择疫苗的依据。"
+   },
+   "treat": {
+    "en": "No cure. The vet may treat secondary bacterial infection. Keep birds warm and cut dust and ammonia.",
+    "ms": "Tiada ubat. Doktor haiwan mungkin merawat jangkitan bakteria sekunder. Pastikan ayam hangat dan kurangkan habuk serta ammonia.",
+    "zh": "无特效药。兽医可能处理继发细菌感染。注意保温，减少粉尘和氨气。"
+   },
+   "prevent": [
+    {
+     "en": "Vaccinate by spray in the hatchery, with strains that match local variants.",
+     "ms": "Vaksin secara semburan di penetasan dengan strain yang sepadan dengan varian tempatan.",
+     "zh": "在孵化场喷雾免疫，选用与本地变异株相符的疫苗株。"
+    },
+    {
+     "en": "Layers and breeders: live boosters during rearing, then an inactivated vaccine before lay.",
+     "ms": "Penelur dan baka: dos penggalak hidup semasa membesar, kemudian vaksin tak aktif sebelum bertelur.",
+     "zh": "蛋鸡和种鸡：育成期用活苗加强，开产前再打灭活苗。"
+    },
+    {
+     "en": "Monitor with PCR and serology to know which variants are around.",
+     "ms": "Pantau dengan PCR dan serologi untuk mengetahui varian yang beredar.",
+     "zh": "用 PCR 和血清学监测本地流行株。"
+    },
+    {
+     "en": "Strict biosecurity between houses and between farms.",
+     "ms": "Biosekuriti ketat antara reban dan antara ladang.",
+     "zh": "鸡舍之间、鸡场之间严格执行生物安全。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "ibd",
+   "type": "virus",
+   "flow": "std",
+   "src": "General veterinary references; WOAH; DVS Malaysia",
+   "tags": [
+    "dull",
+    "white",
+    "wet",
+    "sudden",
+    "many",
+    "growth",
+    "eat"
+   ],
+   "name": {
+    "en": "Gumboro (infectious bursal disease, IBD)",
+    "ms": "Gumboro (penyakit bursa berjangkit, IBD)",
+    "zh": "法氏囊病（甘保罗病，IBD）"
+   },
+   "cause": {
+    "en": "Birnavirus (IBDV). It survives a long time in houses.",
+    "ms": "Birnavirus (IBDV). Ia boleh hidup lama dalam reban.",
+    "zh": "双 RNA 病毒 (IBDV)，可在鸡舍中长期存活。"
+   },
+   "affects": {
+    "en": "Young chickens, mostly 3–6 weeks old. It damages the immune system.",
+    "ms": "Anak ayam, kebanyakannya umur 3–6 minggu. Ia merosakkan sistem imun.",
+    "zh": "幼鸡，多见于 3–6 周龄。会破坏免疫系统。"
+   },
+   "spread": {
+    "en": "Droppings, litter, equipment and people. The virus stays in houses for months.",
+    "ms": "Najis, sekam, peralatan dan orang. Virus kekal dalam reban berbulan-bulan.",
+    "zh": "粪便、垫料、器具和人员。病毒可在鸡舍存留数月。"
+   },
+   "signs": [
+    {
+     "en": "Sudden start; dull, fluffed birds",
+     "ms": "Bermula tiba-tiba; ayam lesu, bulu kembang",
+     "zh": "突然发病；精神差、羽毛蓬松"
+    },
+    {
+     "en": "Watery white diarrhoea; birds peck at their own vent",
+     "ms": "Cirit-birit putih berair; ayam mematuk dubur sendiri",
+     "zh": "白色水样腹泻；啄自己的肛门"
+    },
+    {
+     "en": "Deaths rise for about a week, then fall",
+     "ms": "Kematian meningkat kira-kira seminggu, kemudian menurun",
+     "zh": "死亡增加约一周后下降"
+    },
+    {
+     "en": "Later: poor vaccine response and more other diseases",
+     "ms": "Kemudian: tindak balas vaksin lemah dan lebih banyak penyakit lain",
+     "zh": "之后：疫苗效果差，其他疾病增多"
+    }
+   ],
+   "treat": {
+    "en": "No cure. Give clean water and electrolytes on vet advice. The vet handles any secondary infection.",
+    "ms": "Tiada ubat. Beri air bersih dan elektrolit atas nasihat doktor haiwan. Doktor haiwan urus jangkitan sekunder.",
+    "zh": "无特效药。按兽医建议提供干净饮水和电解质。继发感染由兽医处理。"
+   },
+   "prevent": [
+    {
+     "en": "Vaccinate on a vet program, timed to the chicks' maternal antibody level.",
+     "ms": "Vaksin mengikut program doktor haiwan, ikut paras antibodi induk anak ayam.",
+     "zh": "按兽医程序免疫，时间根据雏鸡母源抗体水平而定。"
+    },
+    {
+     "en": "Vaccinate breeders so chicks start with maternal antibodies.",
+     "ms": "Vaksin ayam baka supaya anak ayam bermula dengan antibodi induk.",
+     "zh": "种鸡要免疫，让雏鸡带有母源抗体。"
+    },
+    {
+     "en": "Thorough clean-out and disinfection between flocks.",
+     "ms": "Pembersihan dan nyahkuman menyeluruh antara kawanan.",
+     "zh": "每批之间彻底清洁消毒。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "salm",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "white",
+    "dull",
+    "sudden",
+    "lame",
+    "drop",
+    "eat",
+    "growth"
+   ],
+   "name": {
+    "en": "Salmonellosis (pullorum, fowl typhoid, paratyphoid)",
+    "ms": "Salmonelosis (pullorum, tifoid ayam, paratifoid)",
+    "zh": "沙门氏菌病（鸡白痢、禽伤寒、副伤寒）"
+   },
+   "cause": {
+    "en": "Salmonella bacteria.",
+    "ms": "Bakteria Salmonella.",
+    "zh": "沙门氏菌。"
+   },
+   "affects": {
+    "en": "Chicks (pullorum), growing and adult birds (fowl typhoid). Paratyphoid types are a food safety risk to people.",
+    "ms": "Anak ayam (pullorum), ayam membesar dan dewasa (tifoid ayam). Jenis paratifoid berisiko kepada keselamatan makanan manusia.",
+    "zh": "雏鸡（白痢）、青年和成年鸡（禽伤寒）。副伤寒型对人有食品安全风险。"
+   },
+   "spread": {
+    "en": "From infected breeders through the egg, and via the hatchery, feed, rodents and droppings.",
+    "ms": "Dari induk dijangkiti melalui telur, dan melalui penetasan, makanan, tikus dan najis.",
+    "zh": "带菌种鸡经种蛋传给雏鸡，也可经孵化场、饲料、老鼠和粪便传播。"
+   },
+   "signs": [
+    {
+     "en": "Chicks: white pasty vent, huddling, deaths in the first 2–3 weeks",
+     "ms": "Anak ayam: dubur putih melekat, berkumpul, mati dalam 2–3 minggu pertama",
+     "zh": "雏鸡：肛门糊白粪、扎堆，头 2–3 周死亡"
+    },
+    {
+     "en": "Adults: pale comb, dullness, green-yellow diarrhoea, egg drop",
+     "ms": "Dewasa: balung pucat, lesu, cirit-birit hijau kekuningan, telur menurun",
+     "zh": "成年鸡：鸡冠苍白、精神差、黄绿色腹泻、产蛋下降"
+    },
+    {
+     "en": "Swollen joints",
+     "ms": "Sendi bengkak",
+     "zh": "关节肿大"
+    },
+    {
+     "en": "Carrier birds can look healthy",
+     "ms": "Ayam pembawa boleh nampak sihat",
+     "zh": "带菌鸡可能外表健康"
+    }
+   ],
+   "treat": {
+    "en": "Vet-prescribed antibiotics can cut deaths but do not clear carriers. Breeder flocks are usually tested and positive birds removed.",
+    "ms": "Antibiotik preskripsi doktor haiwan boleh kurangkan kematian tetapi tidak menghapuskan pembawa. Kawanan baka biasanya diuji dan ayam positif disingkirkan.",
+    "zh": "兽医处方抗生素可减少死亡，但清除不了带菌鸡。种鸡群通常检测后淘汰阳性鸡。"
+   },
+   "prevent": [
+    {
+     "en": "Buy chicks only from Salmonella-tested breeder flocks.",
+     "ms": "Beli anak ayam hanya dari kawanan baka yang diuji Salmonella.",
+     "zh": "只从经沙门氏菌检测的种鸡场购雏。"
+    },
+    {
+     "en": "Control rodents and keep feed clean.",
+     "ms": "Kawal tikus dan pastikan makanan bersih.",
+     "zh": "灭鼠，保持饲料清洁。"
+    },
+    {
+     "en": "Hatchery egg hygiene, and vaccination where the vet advises.",
+     "ms": "Kebersihan telur di penetasan, dan vaksinasi jika dinasihatkan doktor haiwan.",
+     "zh": "孵化场做好种蛋卫生，按兽医建议免疫。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "campy",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [],
+   "name": {
+    "en": "Campylobacteriosis",
+    "ms": "Kampilobakteriosis",
+    "zh": "弯曲杆菌病"
+   },
+   "cause": {
+    "en": "Campylobacter jejuni and related bacteria.",
+    "ms": "Campylobacter jejuni dan bakteria berkaitan.",
+    "zh": "空肠弯曲杆菌等。"
+   },
+   "affects": {
+    "en": "Chickens carry it in the gut, usually without illness. It is a major cause of food poisoning in people.",
+    "ms": "Ayam membawanya dalam usus, biasanya tanpa sakit. Ia punca utama keracunan makanan pada manusia.",
+    "zh": "鸡肠道带菌，通常不发病，但它是人类食物中毒的主要原因之一。"
+   },
+   "spread": {
+    "en": "Water, flies, rodents, workers' boots, and partial catching (thinning) of flocks.",
+    "ms": "Air, lalat, tikus, but pekerja, dan penangkapan separa kawanan.",
+    "zh": "饮水、苍蝇、老鼠、工人鞋靴，以及分批抓鸡出栏。"
+   },
+   "signs": [
+    {
+     "en": "Usually no signs in the flock",
+     "ms": "Biasanya tiada tanda pada kawanan",
+     "zh": "鸡群通常没有症状"
+    },
+    {
+     "en": "Found by testing droppings or carcasses",
+     "ms": "Dikesan melalui ujian najis atau karkas",
+     "zh": "靠粪便或胴体检测发现"
+    }
+   ],
+   "warn": {
+    "en": "The main goal is to keep it out of the food chain.",
+    "ms": "Matlamat utama ialah menghalangnya daripada masuk rantaian makanan.",
+    "zh": "主要目标是不让它进入食物链。"
+   },
+   "treat": {
+    "en": "Flock treatment is not the answer. Focus on hygiene.",
+    "ms": "Rawatan kawanan bukan jalan penyelesaian. Fokus pada kebersihan.",
+    "zh": "对鸡群用药不是办法，重点在卫生。"
+   },
+   "prevent": [
+    {
+     "en": "Boot dips and house-only boots",
+     "ms": "Celup but dan but khas setiap reban",
+     "zh": "消毒脚踏池，每栋鸡舍专用雨靴"
+    },
+    {
+     "en": "Clean, treated drinking water",
+     "ms": "Air minum bersih yang dirawat",
+     "zh": "干净、经处理的饮水"
+    },
+    {
+     "en": "Fly and rodent control",
+     "ms": "Kawalan lalat dan tikus",
+     "zh": "控制苍蝇和老鼠"
+    },
+    {
+     "en": "Avoid thinning where possible",
+     "ms": "Elakkan tangkapan separa jika boleh",
+     "zh": "尽量避免分批抓鸡"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "fc",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "sudden",
+    "many",
+    "comb",
+    "face",
+    "green",
+    "lame",
+    "resp",
+    "dull",
+    "eat"
+   ],
+   "name": {
+    "en": "Fowl cholera",
+    "ms": "Kolera ayam",
+    "zh": "禽霍乱"
+   },
+   "cause": {
+    "en": "Pasteurella multocida bacteria.",
+    "ms": "Bakteria Pasteurella multocida.",
+    "zh": "多杀性巴氏杆菌。"
+   },
+   "affects": {
+    "en": "Growing and adult birds. It is not a hatchery disease; infection starts on the farm.",
+    "ms": "Ayam membesar dan dewasa. Ia bukan penyakit penetasan; jangkitan bermula di ladang.",
+    "zh": "青年和成年鸡。不是孵化场带来的病，感染发生在鸡场。"
+   },
+   "spread": {
+    "en": "Carrier birds, wild birds, rodents, pigs, cats and dogs, and dirty water.",
+    "ms": "Ayam pembawa, burung liar, tikus, babi, kucing dan anjing, dan air tercemar.",
+    "zh": "带菌鸡、野鸟、老鼠、猪、猫、狗，以及被污染的水。"
+   },
+   "signs": [
+    {
+     "en": "Sudden deaths, often of birds in good condition",
+     "ms": "Kematian mengejut, selalunya ayam dalam keadaan baik",
+     "zh": "突然死亡，常是体况良好的鸡"
+    },
+    {
+     "en": "Dark comb, swollen wattles",
+     "ms": "Balung gelap, pial bengkak",
+     "zh": "鸡冠发紫、肉髯肿胀"
+    },
+    {
+     "en": "Green diarrhoea, fever, not eating",
+     "ms": "Cirit-birit hijau, demam, tidak makan",
+     "zh": "绿色腹泻、发热、不吃料"
+    },
+    {
+     "en": "Chronic form: swollen joints, face or wattles",
+     "ms": "Bentuk kronik: sendi, muka atau pial bengkak",
+     "zh": "慢性型：关节、脸部或肉髯肿胀"
+    }
+   ],
+   "treat": {
+    "en": "Vet-prescribed antibiotics chosen from a lab sensitivity test. Outbreaks can return after treatment stops, so remove the source too.",
+    "ms": "Antibiotik preskripsi doktor haiwan berdasarkan ujian sensitiviti makmal. Wabak boleh berulang selepas rawatan berhenti, jadi hapuskan puncanya juga.",
+    "zh": "兽医按药敏试验结果开抗生素。停药后可能复发，所以也要清除传染源。"
+   },
+   "prevent": [
+    {
+     "en": "Keep age groups apart; run all-in all-out.",
+     "ms": "Asingkan kumpulan umur; amalkan masuk semua keluar semua.",
+     "zh": "不同日龄分开饲养，实行全进全出。"
+    },
+    {
+     "en": "No pigs, dogs or cats on the farm; keep wild birds out.",
+     "ms": "Tiada babi, anjing atau kucing di ladang; halang burung liar.",
+     "zh": "场内不养猪、狗、猫，防止野鸟进入。"
+    },
+    {
+     "en": "Use a safe, controlled water source.",
+     "ms": "Guna sumber air yang selamat dan terkawal.",
+     "zh": "使用安全、受控的水源。"
+    },
+    {
+     "en": "Where it is common, vaccinate (usually inactivated bacterins).",
+     "ms": "Di kawasan yang kerap berlaku, vaksin (biasanya bakterin tak aktif).",
+     "zh": "常发地区要免疫（通常用灭活菌苗）。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "ne",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "sudden",
+    "blood",
+    "dull",
+    "eat",
+    "wet",
+    "growth"
+   ],
+   "name": {
+    "en": "Necrotic enteritis (clostridiosis)",
+    "ms": "Enteritis nekrotik (klostridiosis)",
+    "zh": "坏死性肠炎（梭菌病）"
+   },
+   "cause": {
+    "en": "Clostridium perfringens bacteria.",
+    "ms": "Bakteria Clostridium perfringens.",
+    "zh": "产气荚膜梭菌。"
+   },
+   "affects": {
+    "en": "Mostly broilers, 2–6 weeks old.",
+    "ms": "Kebanyakannya ayam pedaging, umur 2–6 minggu.",
+    "zh": "多见于 2–6 周龄肉鸡。"
+   },
+   "spread": {
+    "en": "Normal gut bacteria that overgrow when coccidiosis, feed changes or wet litter damage the gut.",
+    "ms": "Bakteria usus biasa yang membiak berlebihan apabila koksidiosis, pertukaran makanan atau sekam basah merosakkan usus.",
+    "zh": "肠道常在菌，在球虫病、换料或垫料潮湿损伤肠道时大量繁殖。"
+   },
+   "signs": [
+    {
+     "en": "Sudden rise in deaths",
+     "ms": "Kematian naik mendadak",
+     "zh": "死亡突然增加"
+    },
+    {
+     "en": "Dark, smelly or bloody droppings",
+     "ms": "Najis gelap, berbau atau berdarah",
+     "zh": "发黑、恶臭或带血的粪便"
+    },
+    {
+     "en": "Dull, ruffled, not eating",
+     "ms": "Lesu, bulu kusut, tidak makan",
+     "zh": "精神差、羽毛乱、不吃料"
+    },
+    {
+     "en": "Mild form: wet litter and poor growth",
+     "ms": "Bentuk ringan: sekam basah dan pertumbuhan lambat",
+     "zh": "轻型：垫料潮湿、生长慢"
+    }
+   ],
+   "treat": {
+    "en": "Water-soluble antibiotics on vet prescription. Keep to the withdrawal period before slaughter.",
+    "ms": "Antibiotik larut air dengan preskripsi doktor haiwan. Patuhi tempoh henti ubat sebelum sembelih.",
+    "zh": "按兽医处方饮水给药。屠宰前遵守停药期。"
+   },
+   "prevent": [
+    {
+     "en": "Control coccidiosis.",
+     "ms": "Kawal koksidiosis.",
+     "zh": "控制球虫病。"
+    },
+    {
+     "en": "Keep litter dry; fix leaking drinkers.",
+     "ms": "Pastikan sekam kering; baiki bekas minum yang bocor.",
+     "zh": "保持垫料干燥，修好漏水的饮水器。"
+    },
+    {
+     "en": "Change feed step by step; use good-quality feed.",
+     "ms": "Tukar makanan secara beransur; guna makanan berkualiti.",
+     "zh": "逐步换料，使用优质饲料。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "cocci",
+   "type": "para",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "blood",
+    "dull",
+    "growth",
+    "eat",
+    "wet"
+   ],
+   "name": {
+    "en": "Coccidiosis",
+    "ms": "Koksidiosis",
+    "zh": "球虫病"
+   },
+   "cause": {
+    "en": "Eimeria parasites in the gut.",
+    "ms": "Parasit Eimeria dalam usus.",
+    "zh": "肠道内的艾美耳球虫。"
+   },
+   "affects": {
+    "en": "Mostly young birds on litter, around 3–6 weeks old.",
+    "ms": "Kebanyakannya ayam muda atas sekam, sekitar umur 3–6 minggu.",
+    "zh": "多见于垫料饲养的 3–6 周龄幼鸡。"
+   },
+   "spread": {
+    "en": "Parasite eggs (oocysts) in droppings and wet litter.",
+    "ms": "Telur parasit (oosista) dalam najis dan sekam basah.",
+    "zh": "粪便和潮湿垫料中的卵囊。"
+   },
+   "signs": [
+    {
+     "en": "Bloody or watery droppings",
+     "ms": "Najis berdarah atau berair",
+     "zh": "带血或水样粪便"
+    },
+    {
+     "en": "Dull, pale, fluffed birds",
+     "ms": "Ayam lesu, pucat, bulu kembang",
+     "zh": "精神差、苍白、羽毛蓬松"
+    },
+    {
+     "en": "Poor growth, low feed intake",
+     "ms": "Pertumbuhan lambat, kurang makan",
+     "zh": "生长慢、采食减少"
+    },
+    {
+     "en": "Often opens the door to necrotic enteritis",
+     "ms": "Selalunya membuka jalan kepada enteritis nekrotik",
+     "zh": "常继发坏死性肠炎"
+    }
+   ],
+   "treat": {
+    "en": "Anticoccidial drugs in water, on vet prescription. Sulfonamides must not be used in laying hens. Vitamins A and K help recovery.",
+    "ms": "Ubat antikoksidia dalam air, dengan preskripsi doktor haiwan. Sulfonamida tidak boleh digunakan pada ayam penelur. Vitamin A dan K membantu pemulihan.",
+    "zh": "按兽医处方饮水给抗球虫药。磺胺类药不可用于产蛋鸡。维生素 A 和 K 有助恢复。"
+   },
+   "prevent": [
+    {
+     "en": "Anticoccidials in feed, rotated to slow resistance, or vaccination.",
+     "ms": "Antikoksidia dalam makanan, digilir untuk melambatkan kerintangan, atau vaksinasi.",
+     "zh": "饲料中加抗球虫药并轮换使用以减缓耐药，或接种球虫疫苗。"
+    },
+    {
+     "en": "Keep litter dry.",
+     "ms": "Pastikan sekam kering.",
+     "zh": "保持垫料干燥。"
+    },
+    {
+     "en": "Avoid feed program mistakes, such as wrong dose or stopping too early.",
+     "ms": "Elakkan kesilapan program makanan, seperti dos salah atau berhenti terlalu awal.",
+     "zh": "避免饲料程序出错，例如剂量不对或过早停药。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "mg",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "resp",
+    "nasal",
+    "eye",
+    "face",
+    "drop",
+    "growth",
+    "eat"
+   ],
+   "name": {
+    "en": "Mycoplasma gallisepticum (MG, CRD)",
+    "ms": "Mycoplasma gallisepticum (MG, CRD)",
+    "zh": "鸡毒支原体（MG，慢性呼吸道病）"
+   },
+   "cause": {
+    "en": "Mycoplasma gallisepticum.",
+    "ms": "Mycoplasma gallisepticum.",
+    "zh": "鸡毒支原体。"
+   },
+   "affects": {
+    "en": "Chickens and turkeys of all ages. Worse with other infections, dust and ammonia.",
+    "ms": "Ayam dan ayam belanda semua umur. Lebih teruk bersama jangkitan lain, habuk dan ammonia.",
+    "zh": "各日龄鸡和火鸡。合并其他感染、粉尘和氨气时更严重。"
+   },
+   "spread": {
+    "en": "Through the egg from infected breeders, and bird to bird through the air.",
+    "ms": "Melalui telur dari induk dijangkiti, dan dari ayam ke ayam melalui udara.",
+    "zh": "经带菌种鸡的种蛋传播，鸡与鸡之间经空气传播。"
+   },
+   "signs": [
+    {
+     "en": "Rattling breath, coughing, nasal discharge",
+     "ms": "Bunyi nafas berdehit, batuk, lelehan hidung",
+     "zh": "呼吸啰音、咳嗽、流鼻涕"
+    },
+    {
+     "en": "Foamy eyes; swollen sinuses (mainly turkeys)",
+     "ms": "Mata berbuih; sinus bengkak (terutamanya ayam belanda)",
+     "zh": "眼有泡沫；鼻窦肿胀（火鸡较明显）"
+    },
+    {
+     "en": "Slow growth; air sac lesions at slaughter",
+     "ms": "Pertumbuhan lambat; lesi kantung udara semasa sembelih",
+     "zh": "生长慢；屠宰时见气囊炎"
+    },
+    {
+     "en": "Egg drop in layers",
+     "ms": "Telur menurun pada ayam penelur",
+     "zh": "蛋鸡产蛋下降"
+    }
+   ],
+   "treat": {
+    "en": "Vet-prescribed antimycoplasma drugs reduce signs but do not remove the infection.",
+    "ms": "Ubat antimikoplasma preskripsi doktor haiwan mengurangkan tanda tetapi tidak menghapuskan jangkitan.",
+    "zh": "兽医处方抗支原体药可减轻症状，但不能根除感染。"
+   },
+   "prevent": [
+    {
+     "en": "Buy chicks from MG-free breeders.",
+     "ms": "Beli anak ayam dari induk bebas MG.",
+     "zh": "从无 MG 的种鸡场购雏。"
+    },
+    {
+     "en": "Single-age farms; all-in all-out.",
+     "ms": "Ladang satu umur; masuk semua keluar semua.",
+     "zh": "单一日龄饲养，全进全出。"
+    },
+    {
+     "en": "Vaccines (inactivated or live) where allowed and advised by the vet.",
+     "ms": "Vaksin (tak aktif atau hidup) jika dibenarkan dan dinasihatkan doktor haiwan.",
+     "zh": "在法规允许并经兽医建议下使用疫苗（灭活或活苗）。"
+    },
+    {
+     "en": "Good ventilation and low ammonia.",
+     "ms": "Pengudaraan baik dan ammonia rendah.",
+     "zh": "通风良好，氨气浓度低。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "ms",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "lame",
+    "growth",
+    "shell",
+    "green",
+    "resp",
+    "dull"
+   ],
+   "name": {
+    "en": "Mycoplasma synoviae (MS)",
+    "ms": "Mycoplasma synoviae (MS)",
+    "zh": "滑液支原体 (MS)"
+   },
+   "cause": {
+    "en": "Mycoplasma synoviae.",
+    "ms": "Mycoplasma synoviae.",
+    "zh": "滑液支原体。"
+   },
+   "affects": {
+    "en": "Chickens and turkeys: broilers, layers and breeders.",
+    "ms": "Ayam dan ayam belanda: pedaging, penelur dan baka.",
+    "zh": "鸡和火鸡：肉鸡、蛋鸡和种鸡。"
+   },
+   "spread": {
+    "en": "Through the egg, and bird to bird.",
+    "ms": "Melalui telur, dan dari ayam ke ayam.",
+    "zh": "经种蛋传播，也在鸡与鸡之间传播。"
+   },
+   "signs": [
+    {
+     "en": "Lameness; swollen hocks and foot pads",
+     "ms": "Tempang; sendi lutut dan tapak kaki bengkak",
+     "zh": "跛行；跗关节和脚垫肿胀"
+    },
+    {
+     "en": "Pale comb, slow growth",
+     "ms": "Balung pucat, pertumbuhan lambat",
+     "zh": "鸡冠苍白、生长慢"
+    },
+    {
+     "en": "Greenish droppings",
+     "ms": "Najis kehijauan",
+     "zh": "粪便偏绿"
+    },
+    {
+     "en": "Layers: rough, thin shell at the egg tip",
+     "ms": "Penelur: kulit kasar dan nipis di hujung telur",
+     "zh": "蛋鸡：蛋尖端蛋壳粗糙变薄"
+    },
+    {
+     "en": "Mild breathing signs; air sac lesions",
+     "ms": "Tanda pernafasan ringan; lesi kantung udara",
+     "zh": "轻微呼吸症状；气囊炎"
+    }
+   ],
+   "treat": {
+    "en": "Vet-prescribed drugs can prevent air sac and joint lesions, but they do not heal lesions that are already there.",
+    "ms": "Ubat preskripsi doktor haiwan boleh mencegah lesi kantung udara dan sendi, tetapi tidak menyembuhkan lesi yang sudah ada.",
+    "zh": "兽医处方药可预防气囊和关节病变，但对已有的病变无效。"
+   },
+   "prevent": [
+    {
+     "en": "Source birds from MS-free breeders.",
+     "ms": "Dapatkan ayam dari induk bebas MS.",
+     "zh": "从无 MS 的种鸡场引种。"
+    },
+    {
+     "en": "Single-age farms; all-in all-out.",
+     "ms": "Ladang satu umur; masuk semua keluar semua.",
+     "zh": "单一日龄饲养，全进全出。"
+    },
+    {
+     "en": "Vaccination where the vet advises.",
+     "ms": "Vaksinasi jika dinasihatkan doktor haiwan.",
+     "zh": "按兽医建议免疫。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "coryza",
+   "type": "bact",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "face",
+    "nasal",
+    "eye",
+    "resp",
+    "drop",
+    "eat"
+   ],
+   "name": {
+    "en": "Infectious coryza",
+    "ms": "Koriza berjangkit",
+    "zh": "传染性鼻炎"
+   },
+   "cause": {
+    "en": "Avibacterium paragallinarum bacteria.",
+    "ms": "Bakteria Avibacterium paragallinarum.",
+    "zh": "副鸡禽杆菌。"
+   },
+   "affects": {
+    "en": "Growing and laying chickens.",
+    "ms": "Ayam membesar dan ayam penelur.",
+    "zh": "育成鸡和产蛋鸡。"
+   },
+   "spread": {
+    "en": "Carrier birds, shared drinking water, and adding new birds to an old flock.",
+    "ms": "Ayam pembawa, air minum yang dikongsi, dan memasukkan ayam baru ke kawanan lama.",
+    "zh": "带菌鸡、共用饮水，以及把新鸡混入老鸡群。"
+   },
+   "signs": [
+    {
+     "en": "Swollen face and eyes",
+     "ms": "Muka dan mata bengkak",
+     "zh": "脸部和眼睛肿胀"
+    },
+    {
+     "en": "Sticky, bad-smelling nasal discharge",
+     "ms": "Lelehan hidung melekit dan berbau",
+     "zh": "鼻液黏稠、有恶臭"
+    },
+    {
+     "en": "Sneezing; less feed and water intake",
+     "ms": "Bersin; kurang makan dan minum",
+     "zh": "打喷嚏；采食饮水减少"
+    },
+    {
+     "en": "Egg drop",
+     "ms": "Telur menurun",
+     "zh": "产蛋下降"
+    }
+   ],
+   "treat": {
+    "en": "Antibiotic resistance is known in this bacterium, so the vet should run a sensitivity test before choosing a drug.",
+    "ms": "Kerintangan antibiotik diketahui berlaku pada bakteria ini, jadi doktor haiwan patut buat ujian sensitiviti sebelum memilih ubat.",
+    "zh": "此菌已知有耐药性，兽医应先做药敏试验再选药。"
+   },
+   "prevent": [
+    {
+     "en": "Do not mix ages or add new birds to old flocks.",
+     "ms": "Jangan campur umur atau masukkan ayam baru ke kawanan lama.",
+     "zh": "不混养不同日龄，不把新鸡混入老鸡群。"
+    },
+    {
+     "en": "Inactivated vaccine with serovars that match your area (A, B, C).",
+     "ms": "Vaksin tak aktif dengan serovar yang sepadan dengan kawasan anda (A, B, C).",
+     "zh": "使用与本地血清型（A、B、C）相符的灭活苗。"
+    },
+    {
+     "en": "All-in all-out with a full clean-out.",
+     "ms": "Masuk semua keluar semua dengan pembersihan penuh.",
+     "zh": "全进全出，彻底清舍。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "pox",
+   "type": "virus",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "scab",
+    "resp",
+    "drop",
+    "growth",
+    "eat"
+   ],
+   "name": {
+    "en": "Fowl pox",
+    "ms": "Cacar ayam",
+    "zh": "禽痘"
+   },
+   "cause": {
+    "en": "Avipoxvirus.",
+    "ms": "Avipoxvirus.",
+    "zh": "禽痘病毒。"
+   },
+   "affects": {
+    "en": "Chickens and turkeys of any age.",
+    "ms": "Ayam dan ayam belanda semua umur.",
+    "zh": "各日龄鸡和火鸡。"
+   },
+   "spread": {
+    "en": "Mosquitoes and other biting insects, scabs, and skin wounds.",
+    "ms": "Nyamuk dan serangga penggigit lain, kudis, dan luka kulit.",
+    "zh": "蚊子等吸血昆虫、痂皮和皮肤伤口。"
+   },
+   "signs": [
+    {
+     "en": "Dry form: wart-like scabs on comb, wattles and face",
+     "ms": "Bentuk kering: kudis seperti ketuat pada balung, pial dan muka",
+     "zh": "皮肤型：鸡冠、肉髯和脸上有疣状结痂"
+    },
+    {
+     "en": "Wet form: yellow patches in mouth and throat, hard breathing",
+     "ms": "Bentuk basah: tompok kuning dalam mulut dan tekak, sukar bernafas",
+     "zh": "黏膜型：口腔和喉部有黄色假膜，呼吸困难"
+    },
+    {
+     "en": "Slow growth, egg drop",
+     "ms": "Pertumbuhan lambat, telur menurun",
+     "zh": "生长慢、产蛋下降"
+    }
+   ],
+   "treat": {
+    "en": "No specific treatment. The vet may use antibiotics and vitamins to prevent secondary infection.",
+    "ms": "Tiada rawatan khusus. Doktor haiwan mungkin guna antibiotik dan vitamin untuk mencegah jangkitan sekunder.",
+    "zh": "无特效治疗。兽医可能用抗生素和维生素预防继发感染。"
+   },
+   "prevent": [
+    {
+     "en": "Control mosquitoes; use mesh screens.",
+     "ms": "Kawal nyamuk; guna jaring.",
+     "zh": "灭蚊，安装防虫网。"
+    },
+    {
+     "en": "Where pox is common, vaccinate by wing-web stab.",
+     "ms": "Di kawasan yang kerap berlaku, vaksin melalui cucukan selaput sayap.",
+     "zh": "常发地区用翅膀刺种法免疫。"
+    },
+    {
+     "en": "7–10 days after vaccination, check 50–100 birds for a scab at the stab site.",
+     "ms": "7–10 hari selepas vaksin, periksa 50–100 ekor ayam untuk kudis di tempat cucukan.",
+     "zh": "免疫后 7–10 天，抽查 50–100 只鸡刺种部位是否结痂。"
+    }
+   ],
+   "action_flow": "std"
+  },
+  {
+   "id": "eds",
+   "type": "virus",
+   "flow": "std",
+   "src": "Ceva Handbook of Poultry Diseases, Vol. 2 (2014)",
+   "tags": [
+    "drop",
+    "shell"
+   ],
+   "name": {
+    "en": "Egg drop syndrome (EDS '76)",
+    "ms": "Sindrom kejatuhan telur (EDS '76)",
+    "zh": "产蛋下降综合征 (EDS '76)"
+   },
+   "cause": {
+    "en": "Duck adenovirus.",
+    "ms": "Adenovirus itik.",
+    "zh": "鸭腺病毒。"
+   },
+   "affects": {
+    "en": "Laying hens and breeders, around peak lay.",
+    "ms": "Ayam penelur dan baka, sekitar puncak pengeluaran telur.",
+    "zh": "产蛋鸡和种鸡，产蛋高峰前后。"
+   },
+   "spread": {
+    "en": "Mainly through eggs from infected breeders; also dirty egg trays, people, vehicles and ducks.",
+    "ms": "Terutamanya melalui telur dari induk dijangkiti; juga dulang telur kotor, orang, kenderaan dan itik.",
+    "zh": "主要经带毒种鸡的蛋传播；也可经脏蛋托、人员、车辆和鸭子传播。"
+   },
+   "signs": [
+    {
+     "en": "Birds look healthy",
+     "ms": "Ayam nampak sihat",
+     "zh": "鸡只外表健康"
+    },
+    {
+     "en": "Egg drop, or the flock fails to reach peak",
+     "ms": "Telur menurun, atau kawanan tidak mencapai puncak",
+     "zh": "产蛋下降，或达不到产蛋高峰"
+    },
+    {
+     "en": "Thin, soft or no shell; pale brown eggs",
+     "ms": "Kulit nipis, lembut atau tiada; telur perang pucat",
+     "zh": "薄壳、软壳或无壳蛋；褐壳蛋褪色"
+    }
+   ],
+   "warn": {
+    "en": "Also check feed calcium, phosphorus and vitamin D. These cause shell problems too.",
+    "ms": "Semak juga kalsium, fosforus dan vitamin D dalam makanan. Ini juga menyebabkan masalah kulit telur.",
+    "zh": "也要检查饲料中的钙、磷和维生素 D，它们同样会引起蛋壳问题。"
+   },
+   "treat": {
+    "en": "No treatment.",
+    "ms": "Tiada rawatan.",
+    "zh": "无药可治。"
+   },
+   "prevent": [
+    {
+     "en": "Stock from EDS-free breeders.",
+     "ms": "Dapatkan stok dari induk bebas EDS.",
+     "zh": "从无 EDS 的种鸡场引种。"
+    },
+    {
+     "en": "Inactivated vaccine at 14–16 weeks, before lay. Do not vaccinate during lay.",
+     "ms": "Vaksin tak aktif pada umur 14–16 minggu, sebelum bertelur. Jangan vaksin semasa bertelur.",
+     "zh": "开产前 14–16 周龄接种灭活苗。产蛋期不接种。"
+    },
+    {
+     "en": "Use clean egg trays; keep ducks away.",
+     "ms": "Guna dulang telur bersih; jauhkan itik.",
+     "zh": "使用干净蛋托，远离鸭子。"
+    }
+   ],
+   "action_flow": "std"
+  }
+ ],
+ "action_flows": {
+  "emerg": [
+   {
+    "en": "Stop all movement: birds, eggs, feed, manure, people and vehicles.",
+    "ms": "Hentikan semua pergerakan: ayam, telur, makanan, tahi, orang dan kenderaan.",
+    "zh": "停止一切进出：鸡、蛋、饲料、鸡粪、人员和车辆。"
+   },
+   {
+    "en": "Call your vet and report to the nearest DVS office now.",
+    "ms": "Hubungi doktor haiwan dan lapor kepada pejabat DVS terdekat sekarang.",
+    "zh": "马上联络兽医，并向最近的 DVS 办事处报告。"
+   },
+   {
+    "en": "Do not sell, move, treat or cut open birds before DVS arrives.",
+    "ms": "Jangan jual, pindah, rawat atau bedah ayam sebelum DVS tiba.",
+    "zh": "DVS 到场前，不可出售、搬移、用药或剖检鸡只。"
+   },
+   {
+    "en": "Put dead birds in sealed bags and keep them in a cool, shaded spot for testing.",
+    "ms": "Masukkan bangkai dalam beg bertutup dan simpan di tempat sejuk dan teduh untuk ujian.",
+    "zh": "死鸡装进密封袋，放在阴凉处留给化验。"
+   },
+   {
+    "en": "Wear mask, gloves and boots. Wash hands and change clothes before leaving.",
+    "ms": "Pakai pelitup muka, sarung tangan dan but. Basuh tangan dan tukar pakaian sebelum keluar.",
+    "zh": "戴口罩、手套，穿雨靴。离开前洗手、换衣服。"
+   },
+   {
+    "en": "Follow DVS instructions for sampling, culling and cleaning.",
+    "ms": "Ikut arahan DVS untuk persampelan, pemusnahan dan pembersihan.",
+    "zh": "按 DVS 指示进行采样、扑杀和清洁消毒。"
+   }
+  ],
+  "std": [
+   {
+    "en": "Mark the house as sick. Visit it last each day, with its own boots.",
+    "ms": "Tandakan reban sebagai sakit. Lawat paling akhir setiap hari dengan but khas.",
+    "zh": "把这栋鸡舍标为病舍。每天最后才进去，使用专用雨靴。"
+   },
+   {
+    "en": "Move weak birds to a sick pen away from the flock, or cull humanely as the vet advises.",
+    "ms": "Pindahkan ayam lemah ke kandang sakit jauh dari kawanan, atau hapuskan secara berperikemanusiaan seperti nasihat doktor haiwan.",
+    "zh": "把弱鸡移到远离鸡群的病鸡栏，或按兽医建议人道淘汰。"
+   },
+   {
+    "en": "Record deaths, feed use and water use every day.",
+    "ms": "Catat kematian, penggunaan makanan dan air setiap hari.",
+    "zh": "每天记录死亡数、采食量和饮水量。"
+   },
+   {
+    "en": "Call the vet. Send 3–5 freshly sick or dead birds, or swabs, to the lab, chilled at 0–4 °C.",
+    "ms": "Hubungi doktor haiwan. Hantar 3–5 ekor ayam yang baru sakit atau baru mati, atau swab, ke makmal pada suhu 0–4 °C.",
+    "zh": "联络兽医。把 3–5 只刚发病或刚死的鸡（或拭子）冷藏在 0–4 °C 送化验。"
+   },
+   {
+    "en": "Treat only on a vet's prescription (see Treatment below).",
+    "ms": "Rawat hanya dengan preskripsi doktor haiwan (lihat Rawatan di bawah).",
+    "zh": "只按兽医处方治疗（见下方「治疗」）。"
+   },
+   {
+    "en": "After the flock leaves: remove litter, wash, disinfect, and rest the house before new birds.",
+    "ms": "Selepas kawanan keluar: buang sekam, basuh, nyahkuman, dan rehatkan reban sebelum ayam baru masuk.",
+    "zh": "这批鸡出栏后：清走垫料、冲洗、消毒，空舍一段时间再进新鸡。"
+   }
+  ]
+ },
+ "biosecurity_sops": [
+  {
+   "id": "entry",
+   "ordered": true,
+   "title": {
+    "en": "Entering the farm",
+    "ms": "Masuk ke ladang",
+    "zh": "进场程序"
+   },
+   "items": [
+    {
+     "en": "Sign the visitor log.",
+     "ms": "Tandatangan buku log pelawat.",
+     "zh": "填写访客登记。"
+    },
+    {
+     "en": "No entry if you were recently at another poultry farm or bird market. Follow the farm's waiting rule.",
+     "ms": "Dilarang masuk jika anda baru dari ladang ayam lain atau pasar burung. Ikut peraturan tempoh menunggu ladang.",
+     "zh": "最近去过其他鸡场或活禽市场者不得进场，遵守本场的间隔规定。"
+    },
+    {
+     "en": "Vehicles pass through the wheel dip and spray.",
+     "ms": "Kenderaan melalui kolam celup roda dan semburan.",
+     "zh": "车辆经过车轮消毒池并喷雾消毒。"
+    },
+    {
+     "en": "Wash hands. Change into farm clothes and boots.",
+     "ms": "Basuh tangan. Tukar ke pakaian dan but ladang.",
+     "zh": "洗手，换上场内衣服和雨靴。"
+    },
+    {
+     "en": "Step in the boot dip at every house door.",
+     "ms": "Celup but di setiap pintu reban.",
+     "zh": "每栋鸡舍门口都要踩消毒脚踏池。"
+    },
+    {
+     "en": "Visit young birds first and sick houses last.",
+     "ms": "Lawat ayam muda dahulu dan reban sakit paling akhir.",
+     "zh": "先看幼鸡，最后才去病舍。"
+    }
+   ]
+  },
+  {
+   "id": "iso",
+   "ordered": false,
+   "title": {
+    "en": "Sick bird isolation",
+    "ms": "Pengasingan ayam sakit",
+    "zh": "病鸡隔离"
+   },
+   "items": [
+    {
+     "en": "Set the sick pen downwind and away from healthy houses.",
+     "ms": "Letak kandang sakit di hilir angin dan jauh dari reban sihat.",
+     "zh": "病鸡栏设在下风处，远离健康鸡舍。"
+    },
+    {
+     "en": "Use its own feeders, drinkers, boots and tools.",
+     "ms": "Guna bekas makan, bekas minum, but dan alat khas.",
+     "zh": "使用专用料槽、饮水器、雨靴和工具。"
+    },
+    {
+     "en": "Never return sick birds to the flock.",
+     "ms": "Jangan pulangkan ayam sakit ke kawanan.",
+     "zh": "病鸡不可放回鸡群。"
+    },
+    {
+     "en": "Cull birds that will not recover, humanely.",
+     "ms": "Hapuskan ayam yang tidak akan pulih secara berperikemanusiaan.",
+     "zh": "无法康复的鸡要人道淘汰。"
+    },
+    {
+     "en": "Look after the sick pen last each day.",
+     "ms": "Jaga kandang sakit paling akhir setiap hari.",
+     "zh": "每天最后才处理病鸡栏。"
+    }
+   ]
+  },
+  {
+   "id": "dead",
+   "ordered": true,
+   "title": {
+    "en": "Dead bird disposal",
+    "ms": "Pelupusan bangkai",
+    "zh": "死鸡处理"
+   },
+   "items": [
+    {
+     "en": "Collect dead birds at least twice a day.",
+     "ms": "Kutip bangkai sekurang-kurangnya dua kali sehari.",
+     "zh": "每天至少收集两次死鸡。"
+    },
+    {
+     "en": "Count and record them by house.",
+     "ms": "Kira dan rekod mengikut reban.",
+     "zh": "按鸡舍点数并记录。"
+    },
+    {
+     "en": "Wear gloves. Put birds in closed bags or lidded bins.",
+     "ms": "Pakai sarung tangan. Masukkan dalam beg tertutup atau tong bertudung.",
+     "zh": "戴手套，装入封闭袋或有盖桶。"
+    },
+    {
+     "en": "Dispose by approved pit, incinerator or compost. Never sell them or feed them to animals.",
+     "ms": "Lupuskan melalui lubang, insinerator atau kompos yang diluluskan. Jangan jual atau beri makan kepada haiwan.",
+     "zh": "用经批准的掩埋坑、焚化炉或堆肥处理。不可出售或喂动物。"
+    },
+    {
+     "en": "Keep the disposal area far from houses and water.",
+     "ms": "Pastikan kawasan pelupusan jauh dari reban dan sumber air.",
+     "zh": "处理区要远离鸡舍和水源。"
+    }
+   ]
+  },
+  {
+   "id": "clean",
+   "ordered": true,
+   "title": {
+    "en": "House clean-out (all-in all-out)",
+    "ms": "Pembersihan reban (masuk semua keluar semua)",
+    "zh": "空舍清洁（全进全出）"
+   },
+   "items": [
+    {
+     "en": "Remove all birds, then leftover feed from lines and bins.",
+     "ms": "Keluarkan semua ayam, kemudian baki makanan dalam saluran dan tong.",
+     "zh": "先清走所有鸡，再清出料线和料桶里的剩料。"
+    },
+    {
+     "en": "Remove litter and manure, and take them off the farm.",
+     "ms": "Buang sekam dan tahi, dan bawa keluar dari ladang.",
+     "zh": "清走垫料和粪便，运出场外。"
+    },
+    {
+     "en": "Brush dust off the roof, fans and walls.",
+     "ms": "Bersihkan habuk dari bumbung, kipas dan dinding.",
+     "zh": "清扫屋顶、风扇和墙面上的粉尘。"
+    },
+    {
+     "en": "Wash with water and detergent, from top to bottom.",
+     "ms": "Basuh dengan air dan detergen, dari atas ke bawah.",
+     "zh": "用水和清洁剂由上往下冲洗。"
+    },
+    {
+     "en": "Let it dry, then apply an approved disinfectant at the label rate.",
+     "ms": "Biarkan kering, kemudian sembur nyahkuman yang diluluskan mengikut kadar label.",
+     "zh": "晾干后，按标签浓度喷洒认可的消毒剂。"
+    },
+    {
+     "en": "Clean water lines and tanks.",
+     "ms": "Bersihkan saluran dan tangki air.",
+     "zh": "清洗水线和水箱。"
+    },
+    {
+     "en": "Seal rodent holes. Rest the house before new chicks arrive.",
+     "ms": "Tutup lubang tikus. Rehatkan reban sebelum anak ayam baru tiba.",
+     "zh": "堵好鼠洞，空舍一段时间再进雏。"
+    }
+   ]
+  },
+  {
+   "id": "vac",
+   "ordered": false,
+   "title": {
+    "en": "Vaccine handling",
+    "ms": "Pengendalian vaksin",
+    "zh": "疫苗操作"
+   },
+   "items": [
+    {
+     "en": "Store as the label says: fridge (2–8 °C) or liquid nitrogen.",
+     "ms": "Simpan seperti label: peti sejuk (2–8 °C) atau nitrogen cecair.",
+     "zh": "按标签要求保存：冷藏（2–8 °C）或液氮。"
+    },
+    {
+     "en": "Check expiry date and batch number, and record both.",
+     "ms": "Semak tarikh luput dan nombor kelompok, dan rekod kedua-duanya.",
+     "zh": "核对有效期和批号，并记录。"
+    },
+    {
+     "en": "Water vaccination: no chlorine or sanitiser in the water. Birds should finish it within the label time.",
+     "ms": "Vaksin melalui air: tiada klorin atau pembasmi kuman dalam air. Ayam perlu habiskan dalam masa yang dinyatakan pada label.",
+     "zh": "饮水免疫：水中不可有氯或消毒剂，鸡要在标签规定时间内饮完。"
+    },
+    {
+     "en": "Hatchery vaccination is more even than farm vaccination, which is often let down by rushed work and poor water.",
+     "ms": "Vaksin di penetasan lebih seragam berbanding di ladang, yang sering terjejas oleh kerja tergesa-gesa dan kualiti air.",
+     "zh": "孵化场免疫比场内免疫更均匀；场内免疫常因赶工和水质问题而失败。"
+    },
+    {
+     "en": "Check vaccine take with blood tests as the vet advises.",
+     "ms": "Semak keberkesanan vaksin dengan ujian darah seperti nasihat doktor haiwan.",
+     "zh": "按兽医建议抽血检测免疫效果。"
+    }
+   ]
+  },
+  {
+   "id": "lab",
+   "ordered": true,
+   "title": {
+    "en": "Sending samples to the lab",
+    "ms": "Menghantar sampel ke makmal",
+    "zh": "送检样本"
+   },
+   "items": [
+    {
+     "en": "Pick birds that show the main signs, recently sick or just dead.",
+     "ms": "Pilih ayam yang menunjukkan tanda utama, baru sakit atau baru mati.",
+     "zh": "挑选有主要症状、刚发病或刚死的鸡。"
+    },
+    {
+     "en": "Chill at 0–4 °C. Do not freeze unless the lab asks.",
+     "ms": "Sejukkan pada 0–4 °C. Jangan bekukan kecuali makmal minta.",
+     "zh": "冷藏在 0–4 °C。除非化验室要求，不要冷冻。"
+    },
+    {
+     "en": "Label with age, signs, vaccines given, house and farm location.",
+     "ms": "Label dengan umur, tanda, vaksin yang diberi, reban dan lokasi ladang.",
+     "zh": "标签写明日龄、症状、已打疫苗、鸡舍和鸡场位置。"
+    },
+    {
+     "en": "Send to the lab fast.",
+     "ms": "Hantar ke makmal dengan segera.",
+     "zh": "尽快送到化验室。"
+    },
+    {
+     "en": "Blood (serology) shows vaccine response or past infection. Swabs or tissue (PCR) show the virus present now.",
+     "ms": "Darah (serologi) menunjukkan tindak balas vaksin atau jangkitan lalu. Swab atau tisu (PCR) menunjukkan virus yang ada sekarang.",
+     "zh": "血样（血清学）看免疫反应或既往感染；拭子或组织（PCR）看当前有没有病毒。"
+    }
+   ]
+  },
+  {
+   "id": "med",
+   "ordered": false,
+   "title": {
+    "en": "Medicine rules",
+    "ms": "Peraturan ubat",
+    "zh": "用药规定"
+   },
+   "items": [
+    {
+     "en": "Use only medicine prescribed by a vet.",
+     "ms": "Guna hanya ubat yang dipreskripsi doktor haiwan.",
+     "zh": "只用兽医处方的药。"
+    },
+    {
+     "en": "Never use antibiotics for growth or routine prevention (DVS).",
+     "ms": "Jangan guna antibiotik untuk tumbesaran atau pencegahan rutin (DVS).",
+     "zh": "不可把抗生素用于促生长或常规预防（DVS 规定）。"
+    },
+    {
+     "en": "Colistin has been banned in animal feed in Malaysia since 2019.",
+     "ms": "Colistin diharamkan dalam makanan haiwan di Malaysia sejak 2019.",
+     "zh": "马来西亚自 2019 年起禁止在饲料中添加黏菌素。"
+    },
+    {
+     "en": "Record drug, dose, dates and the date withdrawal ends.",
+     "ms": "Rekod ubat, dos, tarikh dan tarikh tempoh henti ubat tamat.",
+     "zh": "记录药名、剂量、日期和停药期结束日。"
+    },
+    {
+     "en": "Do not sell birds or eggs before withdrawal ends.",
+     "ms": "Jangan jual ayam atau telur sebelum tempoh henti ubat tamat.",
+     "zh": "停药期结束前，不可出售鸡或蛋。"
+    },
+    {
+     "en": "Finish the full course. Do not share leftover medicine.",
+     "ms": "Habiskan rawatan penuh. Jangan kongsi baki ubat.",
+     "zh": "用完整个疗程，不要把剩药给别人用。"
+    }
+   ]
+  }
+ ],
+ "images": [
+  {
+   "id": "salm-1",
+   "disease": "salm",
+   "caption": {
+    "en": "Sick chick huddled and drooping, vent stained with droppings",
+    "ms": "Anak ayam sakit berkumpul dan lesu, dubur kotor dengan najis",
+    "zh": "病雏扎堆、垂头，肛门被粪便糊住"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 12,
+   "file": "img/salm-1.webp"
+  },
+  {
+   "id": "salm-2",
+   "disease": "salm",
+   "caption": {
+    "en": "Swollen hock (tibiotarsal) joint",
+    "ms": "Sendi lutut (tibiotarsal) bengkak",
+    "zh": "跗关节肿大"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 13,
+   "file": "img/salm-2.webp"
+  },
+  {
+   "id": "salm-3",
+   "disease": "salm",
+   "caption": {
+    "en": "Post-mortem: liver with many small grey-white spots",
+    "ms": "Bedah siasat: hati dengan banyak bintik kecil putih kelabu",
+    "zh": "剖检：肝脏上有许多灰白色小坏死点"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 14,
+   "file": "img/salm-3.webp"
+  },
+  {
+   "id": "salm-4",
+   "disease": "salm",
+   "caption": {
+    "en": "Post-mortem: enlarged dark liver with a greenish-bronze sheen",
+    "ms": "Bedah siasat: hati besar dan gelap berkilat hijau gangsa",
+    "zh": "剖检：肝脏肿大发黑，带青铜绿色光泽"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 15,
+   "file": "img/salm-4.webp"
+  },
+  {
+   "id": "salm-5",
+   "disease": "salm",
+   "caption": {
+    "en": "Chronic form: misshapen, discoloured egg follicles",
+    "ms": "Bentuk kronik: folikel telur cacat dan berubah warna",
+    "zh": "慢性型：卵泡变形、变色"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 19,
+   "file": "img/salm-5.webp"
+  },
+  {
+   "id": "fc-1",
+   "disease": "fc",
+   "caption": {
+    "en": "Swollen face around the eye (sinus)",
+    "ms": "Muka bengkak di sekeliling mata (sinus)",
+    "zh": "眼周（鼻窦）肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 58,
+   "file": "img/fc-1.webp"
+  },
+  {
+   "id": "fc-2",
+   "disease": "fc",
+   "caption": {
+    "en": "Hen with swollen wattles",
+    "ms": "Ayam betina dengan pial bengkak",
+    "zh": "母鸡肉髯肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 59,
+   "file": "img/fc-2.webp"
+  },
+  {
+   "id": "fc-3",
+   "disease": "fc",
+   "caption": {
+    "en": "Rooster with one large swollen wattle",
+    "ms": "Ayam jantan dengan satu pial bengkak besar",
+    "zh": "公鸡一侧肉髯明显肿大"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 59,
+   "file": "img/fc-3.webp"
+  },
+  {
+   "id": "fc-4",
+   "disease": "fc",
+   "caption": {
+    "en": "Swollen wattle cut open: thick cheesy pus inside",
+    "ms": "Pial bengkak dibelah: nanah pekat seperti keju di dalam",
+    "zh": "切开肿大的肉髯：内有干酪样脓"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 60,
+   "file": "img/fc-4.webp"
+  },
+  {
+   "id": "ne-1",
+   "disease": "ne",
+   "caption": {
+    "en": "Post-mortem: gut lining dead, creamy to greenish",
+    "ms": "Bedah siasat: lapisan usus mati, warna krim hingga kehijauan",
+    "zh": "剖检：肠黏膜坏死，呈奶油色至绿色"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 74,
+   "file": "img/ne-1.webp"
+  },
+  {
+   "id": "ne-2",
+   "disease": "ne",
+   "caption": {
+    "en": "Post-mortem: thickened small intestine with dark patches",
+    "ms": "Bedah siasat: usus kecil menebal dengan tompok gelap",
+    "zh": "剖检：小肠增厚，有暗色斑块"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 75,
+   "file": "img/ne-2.webp"
+  },
+  {
+   "id": "cocci-1",
+   "disease": "cocci",
+   "caption": {
+    "en": "Bloody droppings on the floor",
+    "ms": "Najis berdarah di lantai",
+    "zh": "地上有带血粪便"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 111,
+   "file": "img/cocci-1.webp"
+  },
+  {
+   "id": "cocci-2",
+   "disease": "cocci",
+   "caption": {
+    "en": "Feathers around the vent stained with blood",
+    "ms": "Bulu sekitar dubur berlumuran darah",
+    "zh": "肛门周围羽毛沾血"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 111,
+   "file": "img/cocci-2.webp"
+  },
+  {
+   "id": "cocci-3",
+   "disease": "cocci",
+   "caption": {
+    "en": "Post-mortem: caeca full of blood, seen through the wall",
+    "ms": "Bedah siasat: sekum penuh darah, nampak dari luar dinding",
+    "zh": "剖检：盲肠充血，隔着肠壁可见出血"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 112,
+   "file": "img/cocci-3.webp"
+  },
+  {
+   "id": "cocci-4",
+   "disease": "cocci",
+   "caption": {
+    "en": "Post-mortem: opened caeca with bloody content",
+    "ms": "Bedah siasat: sekum dibuka dengan isi berdarah",
+    "zh": "剖检：剖开盲肠，内容物带血"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 113,
+   "file": "img/cocci-4.webp"
+  },
+  {
+   "id": "cocci-5",
+   "disease": "cocci",
+   "caption": {
+    "en": "Post-mortem: small intestine with many red spots through the wall",
+    "ms": "Bedah siasat: usus kecil dengan banyak bintik merah",
+    "zh": "剖检：小肠壁可见许多红色出血点"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 114,
+   "file": "img/cocci-5.webp"
+  },
+  {
+   "id": "mg-1",
+   "disease": "mg",
+   "caption": {
+    "en": "Post-mortem: thick yellow cheesy material in the air sacs",
+    "ms": "Bedah siasat: bahan kuning pekat seperti keju dalam kantung udara",
+    "zh": "剖检：气囊内有黄色干酪样物"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 131,
+   "file": "img/mg-1.webp"
+  },
+  {
+   "id": "mg-2",
+   "disease": "mg",
+   "caption": {
+    "en": "Hen with a swollen sinus below the eye",
+    "ms": "Ayam betina dengan sinus bengkak di bawah mata",
+    "zh": "母鸡眼下鼻窦肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 133,
+   "file": "img/mg-2.webp"
+  },
+  {
+   "id": "ms-1",
+   "disease": "ms",
+   "caption": {
+    "en": "Swollen hocks on both legs",
+    "ms": "Sendi lutut bengkak pada kedua-dua kaki",
+    "zh": "双腿跗关节肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 149,
+   "file": "img/ms-1.webp"
+  },
+  {
+   "id": "ms-2",
+   "disease": "ms",
+   "caption": {
+    "en": "Lame bird sitting, with a swollen hock",
+    "ms": "Ayam tempang duduk, sendi lutut bengkak",
+    "zh": "跛鸡伏地，跗关节肿大"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 149,
+   "file": "img/ms-2.webp"
+  },
+  {
+   "id": "ms-3",
+   "disease": "ms",
+   "caption": {
+    "en": "Eggs with rough, thin, discoloured shell at the pointed end (EAA)",
+    "ms": "Telur dengan kulit kasar, nipis dan pudar di hujung tirus (EAA)",
+    "zh": "蛋尖端蛋壳粗糙、变薄、褪色 (EAA)"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 152,
+   "file": "img/ms-3.webp"
+  },
+  {
+   "id": "coryza-1",
+   "disease": "coryza",
+   "caption": {
+    "en": "Hen with a swollen face",
+    "ms": "Ayam betina dengan muka bengkak",
+    "zh": "母鸡脸部肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 164,
+   "file": "img/coryza-1.webp"
+  },
+  {
+   "id": "coryza-2",
+   "disease": "coryza",
+   "caption": {
+    "en": "Swelling around the eye, later stage",
+    "ms": "Bengkak di sekeliling mata, peringkat lewat",
+    "zh": "后期眼周肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 164,
+   "file": "img/coryza-2.webp"
+  },
+  {
+   "id": "coryza-3",
+   "disease": "coryza",
+   "caption": {
+    "en": "Rooster with a swollen face, a typical sign",
+    "ms": "Ayam jantan dengan muka bengkak, tanda biasa",
+    "zh": "公鸡脸部肿胀，典型症状"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 165,
+   "file": "img/coryza-3.webp"
+  },
+  {
+   "id": "coryza-4",
+   "disease": "coryza",
+   "caption": {
+    "en": "Rooster with swollen face and wattles",
+    "ms": "Ayam jantan dengan muka dan pial bengkak",
+    "zh": "公鸡脸部和肉髯肿胀"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 166,
+   "file": "img/coryza-4.webp"
+  },
+  {
+   "id": "pox-1",
+   "disease": "pox",
+   "caption": {
+    "en": "Dry pox: wart-like scabs on the head and around the eye",
+    "ms": "Cacar kering: kudis seperti ketuat di kepala dan sekeliling mata",
+    "zh": "皮肤型禽痘：头部和眼周疣状结痂"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 179,
+   "file": "img/pox-1.webp"
+  },
+  {
+   "id": "pox-2",
+   "disease": "pox",
+   "caption": {
+    "en": "Pox scabs on bare skin",
+    "ms": "Kudis cacar pada kulit tanpa bulu",
+    "zh": "无毛皮肤上的痘痂"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 180,
+   "file": "img/pox-2.webp"
+  },
+  {
+   "id": "pox-3",
+   "disease": "pox",
+   "caption": {
+    "en": "Wet pox: yellow-white patches inside the mouth",
+    "ms": "Cacar basah: tompok putih kekuningan dalam mulut",
+    "zh": "黏膜型禽痘：口腔内黄白色假膜"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 181,
+   "file": "img/pox-3.webp"
+  },
+  {
+   "id": "eds-1",
+   "disease": "eds",
+   "caption": {
+    "en": "Tray of thin-shelled, soft and shell-less eggs",
+    "ms": "Dulang telur berkulit nipis, lembut dan tanpa kulit",
+    "zh": "一托薄壳、软壳和无壳蛋"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 196,
+   "file": "img/eds-1.webp"
+  },
+  {
+   "id": "eds-2",
+   "disease": "eds",
+   "caption": {
+    "en": "Irregular eggs with rough, thin shells",
+    "ms": "Telur tidak sekata dengan kulit kasar dan nipis",
+    "zh": "形状不规则、壳粗而薄的蛋"
+   },
+   "source": "Ceva Handbook of Poultry Diseases Vol.2",
+   "pdf_page": 196,
+   "file": "img/eds-2.webp"
+  },
+  {
+   "id": "nd-1",
+   "disease": "nd",
+   "caption": {
+    "en": "Bird down with head bent and dark comb (velogenic ND)",
+    "ms": "Ayam rebah dengan kepala tertunduk dan balung gelap (ND velogenik)",
+    "zh": "鸡只倒地、头下垂、鸡冠发暗（强毒新城疫）"
+   },
+   "source": "Ceva Newcastle disease booklet 2023",
+   "pdf_page": 5,
+   "file": "img/nd-1.webp"
+  },
+  {
+   "id": "nd-2",
+   "disease": "nd",
+   "caption": {
+    "en": "Twisted neck (torticollis), a nervous sign",
+    "ms": "Leher terpusing (tortikolis), tanda saraf",
+    "zh": "扭颈，神经症状"
+   },
+   "source": "Ceva Newcastle disease booklet 2023",
+   "pdf_page": 5,
+   "file": "img/nd-2.webp"
+  },
+  {
+   "id": "nd-3",
+   "disease": "nd",
+   "caption": {
+    "en": "Bird with twisted neck, head turned back",
+    "ms": "Ayam dengan leher terpusing, kepala berpaling ke belakang",
+    "zh": "扭颈，头转向后方"
+   },
+   "source": "Ceva Newcastle disease booklet 2023",
+   "pdf_page": 5,
+   "file": "img/nd-3.webp"
+  },
+  {
+   "id": "nd-4",
+   "disease": "nd",
+   "caption": {
+    "en": "Post-mortem: bleeding at the tips of the glandular stomach",
+    "ms": "Bedah siasat: pendarahan di hujung kelenjar proventrikulus",
+    "zh": "剖检：腺胃乳头出血"
+   },
+   "source": "Ceva Newcastle disease booklet 2023",
+   "pdf_page": 5,
+   "file": "img/nd-4.webp"
+  }
+ ]
+}
