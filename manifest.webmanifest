@@ -1,7 +1,7 @@
 {
-  "name": "Farmiera Poultry",
-  "short_name": "Farmiera",
-  "description": "Poultry SOP Guide",
+  "name": "Poultry SOP — Disease Handling Guide",
+  "short_name": "Poultry SOP",
+  "description": "Disease Handling Guide",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
