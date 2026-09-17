@@ -1156,7 +1156,7 @@ let userPhoto = null;           // {blob, b64, url}
 const BACKUP_URL   = "https://script.google.com/macros/s/AKfycbyFG358AHbr_ADJ3QHffz62fe_ANyi-S7YslgSlc1FRZtgXugVJgPk7GIBdOLxMlDVh/exec";   // e.g. "https://script.google.com/macros/s/AKfycb.../exec"
 const BACKUP_TOKEN = "bryanwooqm9927";   // e.g. "a random string you make up" — must match the script's TOKEN
 
-function backupPhoto(){
+function backupPhoto(outcome){
   if (!BACKUP_URL || !userPhoto) return;
   try {
     fetch(BACKUP_URL, {
@@ -1170,10 +1170,35 @@ function backupPhoto(){
         when: new Date().toISOString(),
         lang,
         symptoms: [...picked],
-        question: $("#askQ").value.trim()
+        question: $("#askQ").value.trim(),
+        result: formatOutcome(outcome)
       })
     }).catch(() => {});   // never let a backup failure surface to the farmer
   } catch(e){}
+}
+
+// Turns {step1, r} or {error} into a plain, readable object for the backup JSON —
+// English disease names (not just ids), so it reads on its own without cross-referencing the app.
+function formatOutcome(outcome){
+  if (!outcome) return null;
+  if (outcome.error) return { error: outcome.error };
+  const { step1, r } = outcome;
+  const out = {
+    observed: step1?.observed || [],
+    photo_quality: step1?.photo_quality || null
+  };
+  if (r?.results?.length){
+    out.top3 = r.results.slice(0, 3).map(x => ({
+      disease: D.find(d => d.id === x.disease_id)?.name?.en || x.disease_id,
+      level: x.level || null,
+      why: x.why || [],
+      check: x.check || []
+    }));
+  }
+  if (r?.summary) out.summary = r.summary;
+  if (r?.answer)  out.answer  = r.answer;
+  if (r?.urgent)  out.urgent  = true;
+  return out;
 }
 let askCtl = null;
 
@@ -1473,21 +1498,23 @@ async function runAsk(){
   const sig = askCtl.signal;
   $("#askBtn").disabled = true;
   lastResult = null; renderAnswer();
-  backupPhoto();   // fire-and-forget; never blocks or delays the AI call below
   try {
     setProgress(L(UI.step1));
     const photoArr = userPhoto ? [{type:userPhoto.type, data:userPhoto.data}] : [];
     const step1 = await callClaude(prompt1(q), photoArr, sig, 600);
-    if (step1.is_poultry === false){ lastResult = {step1, r:{results:[]}}; renderAnswer(); return; }
+    if (step1.is_poultry === false){ lastResult = {step1, r:{results:[]}}; renderAnswer(); backupPhoto({step1}); return; }
     const ret = retrieve(step1);
     setProgress(L(UI.step2).replace("{n}", ret.refs.length));
     const imgs = [...photoArr, ...ret.refs.map(m => dataUriParts(m.src))];
     const r = await callClaude(prompt2(q, step1, ret), imgs, sig, 1800);
     lastResult = {step1, r};
     renderAnswer();
+    backupPhoto({step1, r});   // fire-and-forget, now that we know what the AI concluded
     $("#askOut").scrollIntoView({behavior:"smooth", block:"start"});
   } catch(e){
-    showErr(e instanceof AskError ? e.kind : "gen");
+    const kind = e instanceof AskError ? e.kind : "gen";
+    showErr(kind);
+    if (kind !== "cancel") backupPhoto({error: kind});   // still back up the photo, just note it errored
   } finally {
     setProgress(null); $("#askBtn").disabled = false; askCtl = null;
   }
