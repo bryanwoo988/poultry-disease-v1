@@ -3,7 +3,7 @@
 // 2. Pages are fetched from the network first, so users get the new version on the next open.
 //    If offline, the saved copy is used.
 // 3. AI calls (Anthropic / OpenAI) are never cached.
-const VERSION = "1.3.0";
+const VERSION = "1.4.0";
 const CACHE = "poultry-sop-" + VERSION;
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-512-maskable.png"];
 const NO_CACHE = ["api.anthropic.com", "api.openai.com"];
