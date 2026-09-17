@@ -328,6 +328,7 @@ footer.foot{font-size:.8rem;color:var(--muted);padding:26px 0 10px;border-top:1p
       <div id="shotEmpty" style="display:grid;gap:12px;justify-items:center">
         <svg class="big" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
         <p style="margin:0;color:var(--muted)" data-t="shotHint"></p>
+        <p id="shotPrivacy" style="margin:0;color:var(--muted);font-size:.76rem;display:none" data-t="shotPrivacy"></p>
       </div>
       <img id="shotImg" alt="" hidden>
       <div class="row2">
@@ -544,6 +545,7 @@ const UI = {
   askHero: T("Snap a photo, get likely causes","Ambil gambar, dapatkan kemungkinan punca","拍张照片，找出可能的病因"),
   askLede: T("Let the AI agent compare your photo with reference photos from the disease books and rank the three closest matches.","Biar ejen AI membandingkan gambar anda dengan gambar rujukan daripada buku penyakit dan menyusun tiga padanan paling hampir.","让 AI 助手把你的照片和禽病书里的参考照片对比，并列出最接近的三个结果。"),
   shotHint: T("Take a clear, close photo of the sick bird, droppings or eggs, in good light.","Ambil gambar dekat dan jelas ayam sakit, najis atau telur, dalam cahaya yang baik.","在光线充足的地方，近距离清楚拍下病鸡、粪便或蛋。"),
+  shotPrivacy: T("Your photo may be saved to help improve this app.","Foto anda mungkin disimpan untuk membantu menambah baik aplikasi ini.","你的照片可能会被保存，用于改进这个 app。"),
   takePhoto: T("Take photo","Ambil gambar","拍照"),
   pickPhoto: T("Choose from gallery","Pilih dari galeri","从相册选择"),
   removePhoto: T("Remove","Buang","移除"),
@@ -1144,6 +1146,35 @@ function renderAll(){
 const LANGNAME = {en:"English", ms:"Bahasa Melayu", zh:"Simplified Chinese"};
 let sampleFn = null, sampleImgMax = 0;
 let userPhoto = null;           // {blob, b64, url}
+
+/* ---------- Photo backup (optional) ----------
+   Leave BACKUP_URL empty to turn this off completely — nothing is sent anywhere.
+   To turn it on: deploy the Apps Script (see DEPLOY.md), paste the /exec URL below,
+   and the privacy note under the camera box appears automatically.
+   BACKUP_TOKEN is optional but recommended — it must match TOKEN in the Apps Script,
+   otherwise anyone who finds your /exec URL could upload files to your Drive. */
+const BACKUP_URL   = "https://script.google.com/macros/s/AKfycbyFG358AHbr_ADJ3QHffz62fe_ANyi-S7YslgSlc1FRZtgXugVJgPk7GIBdOLxMlDVh/exec";   // e.g. "https://script.google.com/macros/s/AKfycb.../exec"
+const BACKUP_TOKEN = "bryanwooqm9927";   // e.g. "a random string you make up" — must match the script's TOKEN
+
+function backupPhoto(){
+  if (!BACKUP_URL || !userPhoto) return;
+  try {
+    fetch(BACKUP_URL, {
+      method: "POST",
+      mode: "no-cors",                                   // fire-and-forget: we never read the response
+      headers: {"Content-Type": "text/plain;charset=utf-8"},  // avoids a CORS preflight
+      body: JSON.stringify({
+        token: BACKUP_TOKEN,
+        image: userPhoto.data,
+        mime: userPhoto.type,
+        when: new Date().toISOString(),
+        lang,
+        symptoms: [...picked],
+        question: $("#askQ").value.trim()
+      })
+    }).catch(() => {});   // never let a backup failure surface to the farmer
+  } catch(e){}
+}
 let askCtl = null;
 
 const PROVIDERS = {
@@ -1442,6 +1473,7 @@ async function runAsk(){
   const sig = askCtl.signal;
   $("#askBtn").disabled = true;
   lastResult = null; renderAnswer();
+  backupPhoto();   // fire-and-forget; never blocks or delays the AI call below
   try {
     setProgress(L(UI.step1));
     const photoArr = userPhoto ? [{type:userPhoto.type, data:userPhoto.data}] : [];
@@ -1483,6 +1515,7 @@ function renderAskStatic(){
   fillModels();
   $("#eyeBtn").textContent = L($("#keyIn").type === "password" ? UI.show : UI.hide);
   $("#libNote").textContent = L(UI.libNote).replace("{n}", IMGS.length);
+  $("#shotPrivacy").style.display = BACKUP_URL ? "block" : "none";
   paintEngine(); paintShot(); renderAskChips(); renderGallery(); renderAnswer();
 }
 
